@@ -4,27 +4,47 @@
 
 from typing import List
 
-
 def convert_to_absolute() -> float:
-    return 0.0
+    return abs(float(input("Enter a number : ")))
 
 
 def use_prefixes() -> List[str]:
     prefixes, suffixes = 'JKLMNOP', 'ack'
-
-    return [""]
+    noms = []
+    for letter in prefixes:
+        noms.append(letter + suffixes)
+    return noms
 
 
 def prime_integer_summation() -> int:
-    return 0
+    primes = []
+    n = 2
+    while len(primes) != 100:
+        i = 2
+        while i < n and n % i != 0:
+            i += 1
+
+        if i == n:
+            primes.append(n)
+        n += 1
+    return sum(primes)
 
 
 def factorial(number: int) -> int:
-    return 0
+    if number == 0:
+        return 1
+    product = 1
+    for i in range(1, number):
+        product *= i
+    return product
 
 
 def use_continue() -> None:
-    pass
+    for number in range(1, 11):
+        if number == 5:
+            continue
+        else:
+            print(number)
 
 
 def main() -> None:
