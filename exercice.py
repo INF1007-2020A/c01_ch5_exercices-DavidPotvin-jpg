@@ -37,7 +37,7 @@ def factorial(number: int) -> int:
         return 1
 
     product = 1
-    for i in range(1, number):
+    for i in range(1, number +1):
         product *= i
     return product
 
